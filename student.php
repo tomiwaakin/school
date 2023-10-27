@@ -69,7 +69,7 @@
     <section id="body">
         <img src="image/170428-collegetour-stock.jpg" style="height: 400px;" width="100%">
         <div>
-            <form action="">
+            <form action="student_login.php" method="post">
                 <div>
                     <label>Email/Username</label>
                     <input type="text" placeholder="Email/Username" name="user">

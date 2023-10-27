@@ -1,6 +1,6 @@
 <?php
 session_start();
-class staff_login {
+class Student_login {
     public $uname;
     public $pass;
 
@@ -11,7 +11,7 @@ class staff_login {
         function store(){ 
             $connect = mysqli_connect("localhost","root","","maryland_college");
             if($connect){ 
-                $query = "SELECT * FROM staff WHERE email= '$this->uname'  
+                $query = "SELECT * FROM student_bio WHERE uname= '$this->uname'  
                 AND pass = '$this->pass'";
                
                $result = mysqli_query($connect,$query);
@@ -26,9 +26,9 @@ class staff_login {
                 }
             }
         }
-   $em = $_POST["email"];
+   $em = $_POST["user"];
 $ps = $_POST["pass"];
-$staff = new staff_login($em,$ps);
+$staff = new Student_login($em,$ps);
 $staff->store();
 
    echo "<br>";
